@@ -20,6 +20,9 @@
 
 <article id="top" class="wrapper style1">
         <div class="container">
+            <h1 align="center"> <u>DEVELOPMENT</u> </h1>
+
+            <br><br>
         
             <p>
                 The development of the project started from first week, we continued building prototypes until we finalized a concept.
@@ -156,25 +159,25 @@
                         <p style="color:grey;font-size:12px">
                             Zoom in for better results
                         </p>
-                          <h2>Dataflow Diagram</h2>
+                          <h2>Data flow Diagram</h2>
                          <img heigt="300" width= "1200" src="images/dataflow.png" alt="" />
                          <p style="color:grey;font-size:12px">
-                            Chek SAD document for better results
+                            Check SAD document for better results
                         </p>
                         <p style="color:black;font-size:16px">
                             This diagram show how data is handled by different applications. This is how it works:
                             <ol start="1">
-                                <li>Day 1: Before Birthday </li>
+                                <li><strong>Day 1: Before Birthday</strong> </li>
                                     <ul>
                                         <li><strong>Prototype:</strong> Fetch fans from PSV database who have birthday next day</li>
-                                        <li><strong>Prototype: </strong>It generates audio file i.e. fan's name and age using google TTS API it translates text into audio</li>
+                                        <li><strong>Prototype: </strong>It generates audio file i.e. fan's name and age using Google TTS API it translates text into audio</li>
                                         <li><strong>Prototype:</strong> Fetches audio file generated usingTTS and embed it in Pre recorded video and render the video
                                         </li>
                                         <li><strong>Vimeo:</strong> fetched rendered video, upload it to Vimeo account and return the upload link where video is stored
                                         </li>
                                         <li><strong>Prototype:</strong> Combine video link (a landing page for the video) in the birthday email using group ID from PSV database</li>
                                     </ul>
-                                <li>Day 2: On Birthday</li>
+                                <li><strong>Day 2: On Birthday</strong></li>
                                     <ul>
                                         <li><strong>PSV Mailing service:</strong> Send emails to people who have their birthday</li>
                                         <li><strong>Fan:</strong> Fan receives an email with the personalized video. </li>
@@ -185,13 +188,109 @@
                             </ol>
                         </p>
                         <p style="color:black;font-size:16px">
-                            All the c4 model have been made during the internship and can be found in the <a target="blank" href="documents/sad.pdf">Software Architecture Document</a>.
+                            All the C-4 models have been made during the internship and can be found in the <a target="blank" href="documents/sad.pdf">Software Architecture Document</a>.
                         </p>
                     </div>
             </div>
+            <p style="color:black;font-size:16px">
+                    As I and Mathijs (software developers) were familiar with Java, we have implemented major part of this prototype in Java. One of my goals during the internship was to code in Python so I did some Python programming as well and some part is built in python.
+                </p>
 
+                    <p style="color:black;font-size:22px">Our Prototype does 4 major parts:
+                   
+                  <br>
+                    <ol start="1">
+                        <li>PSV Database</li>
+                        <li>TTS</li>
+                        <li>Video Render from AfterEffects</li>
+                        <li>Hosting</li>
+                    </ol>
+                    </p>
+                     <p style="color:black;font-size:16px"> 
+                            <strong>Find code in zip file: Prototypes > PSV_Dynamic_Video-main</strong>
+                        </p>
+            <div class="row">
+                    <div class="col-8 col-7-large col-12-medium">
+                        <header>
+                            <h4><strong>PSV Database</strong></h4>
+                        </header>
+                        <p style="color:black;font-size:16px">
+                           In our Prototype we are successful in calling PSV's Database and make call to get Fan data. Now we can successfully fetch all the people who have their birthday's on the present day. I worked on this separately to access the database and see what details/data is available to us that can be useful on the project.
+                        </p>     
 
+                    </div>
+            </div>
+            <div class="row">
+                    <div class="col-8 col-7-large col-12-medium">
+                        <header>
+                            <h4><strong>TTS</strong></h4>
+                        </header>
+                        <p style="color:black;font-size:16px">
+                            Using our, API we can successfully call Google TTS API to generate Audio files, that are personalized for each fan and generated in order to embed them in the raw video of a player to deliver a personalized video in the email.
+                        </p>        
+                    </div>
+            </div>
+
+            <div class="row">
+                   
+                    <div class="col-8 col-7-large col-12-medium">
+                        <header>
+                            <h4><strong>Video Render</strong></h4>
+                        </header>
+                        <p style="color:black;font-size:16px">
+                            This is the part where video editing happens, Editing can be automated in afterEffects using ExtendScript, The language is JSX(Java script extended), THis part is done by the media designer in the team, Niek. He created a script that gets input from our prototype and combine audio samples with the raw video and finally render a personalized video. This sample prototype is working and we are able to render video automatically, but this part was not my specialty as I was looking more into other 3 main parts i.e. TTS, Hosting and PSV Database.
+                        </p>        
+                    </div>
+            </div>
+
+            <div class="row">
+                    <div class="col-8 col-7-large col-12-medium">
+                        <header>
+                            <h4><strong>Hosting</strong></h4>
+                        </header>
+                        <p style="color:black;font-size:16px">
+                            For hosting we are using Vimeo Business Plan which gives us 5 TB of Monthly hosting space on cloud and also their is an API available to upload the videos. 
+                            In the prototype I built a functionality that uploads the videos to the business account, using Vimeo's API. It is possible to fetch the rendered video from location then upload it to Vimeo and finally receive the link where the video is hosted.<br>
+                            I was completely responsible for this part and everything was done by me individually. 
+                        </p>        
+                        <p style="color:black;font-size:14px"> 
+                            <strong>Find code in zip file: Prototypes > Vimeo_upload</strong>
+                        </p>
+                    </div>
+            </div><br>
+            <hr>
+            <br>
+            <p style="color:black;font-size:18px">
+                    Right now we have all the things working, but separately and we are working on developing the final Hi-Fi prototype which will be presented in the final presentation during the assessment at school and at the office. 
+            </p>
+            <hr>
+             <div class="row">
+                    <div class="col-8 col-7-large col-12-medium">
+                        <header>
+                            <h2><strong>Challenges</strong></h2>
+                        </header>
+                        <p style="color:black;font-size:16px">
+                            Building prototypes was a fun process, but I wish we had much time for testing purposes, as we are already done with our internship we did not get any chance to test our product, although we did tested what we have with sample users to make sure we are on the right track. Here are some challenges that I faced during the project:
+                        </p>        
+                        <p style="color:black;font-size:14px"> 
+                            <ul>
+                                        <li><strong>Client:</strong> We had very good communication with our client, but it was difficult to make them happy, As a result it took long time to come to a conclusion and we entered the development phase late in mid-December</li>
+                                        <li><strong>Technology: </strong>We explored a lot of technologies, but to satisfy the requirement of voice cloning with recording time constraints, It ws just not possible to develop a voice clone and we had to move to a different concept.</li>
+                                        <li><strong>Work from Home:</strong> Due to corona virus we had were forced to work from home, My home Office is not as good a sthe office so it was a bit challenging to do everything from home.
+                                        </li>
+                                        <li><strong>Costs:</strong> Cost was a big factor, we had to find the cepaest solution, and cheapest is not always the best. We had to discrd some really cool ideas because of cost.
+                                        </li>
+                                        
+                                    </ul>
+                            
+                        </p>
+                    </div>
+            </div>
+                 <p style="color:black;font-size:16px" align="right">
+                <a href="peers.html"> > Next Page</a>
+            </p>
         </div>
+       
 </article>
 
 
